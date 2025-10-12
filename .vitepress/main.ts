@@ -20,5 +20,4 @@ app.post("/api/send-email", async (c) => {
 });
 app.use("*", serveStatic({ root: "./.vitepress/dist/" }));
 
-Deno.serve({ port: 8088 }, app.fetch);
-console.log("Server running on http://localhost:8088");
+Deno.serve(app.fetch);
