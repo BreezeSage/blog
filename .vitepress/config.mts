@@ -10,6 +10,23 @@ export default defineConfig({
       dark: "min-dark",
     },
   },
+  vite: {
+    optimizeDeps: {
+      exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
+    },
+    server: {
+      headers: {
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Embedder-Policy": "require-corp",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "Origin-Agent-Cluster": "?1",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept, Range",
+      },
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -34,6 +51,8 @@ export default defineConfig({
           },
           { text: "通用代码片段", link: "/docs/code-snippets.md" },
           { text: "异常问题处理集合", link: "/docs/troubleshooting.md" },
+          { text: "Webrtc", link: "/docs/Webrtc.md" },
+          { text: "FFmpeg", link: "/docs/FFmpeg.md" },
         ],
       },
     ],

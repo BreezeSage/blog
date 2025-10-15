@@ -1,5 +1,7 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
+import './server/preload.ts'
+import './server/cron.ts'
 import { sendEmail } from './server/email.ts'
 
 const app = new Hono()
@@ -11,7 +13,7 @@ app.post("/api/send-email", async (c) => {
     console.log("Request to send email to:", body);
 
     try {
-        sendEmail(body.to)
+        await sendEmail(body.to)
     } catch (error) {
         console.error("Error sending email:", error);
         return c.json({ message: "Failed to send email.", error: error }, 500);

@@ -3,6 +3,9 @@
   "specifiers": {
     "jsr:@std/assert@1": "1.0.15",
     "jsr:@std/internal@^1.0.12": "1.0.12",
+    "npm:@ffmpeg/core-mt@~0.12.10": "0.12.10",
+    "npm:@ffmpeg/ffmpeg@~0.12.15": "0.12.15",
+    "npm:@ffmpeg/util@~0.12.2": "0.12.2",
     "npm:@types/nodemailer@^7.0.2": "7.0.2",
     "npm:@types/react-dom@^19.2.1": "19.2.1_@types+react@19.2.2",
     "npm:@types/react@^19.2.2": "19.2.2",
@@ -776,6 +779,21 @@
       "integrity": "sha512-tQd/1efJuzPC6rCFwEvLtci/xNFcTZknmXs98FYDfGE4wP9ClFV98nyKrzJKVPMhdDnjzLhdUyMX4PsQAPjwIw==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@ffmpeg/core-mt@0.12.10": {
+      "integrity": "sha512-atyRTOpa58bLCIgd6GXBZAXWyWD3AUoQyzxqjvGhp9MuSzdILtOTI62ffLswBsCnLq15lQ8IETHUpm1oe4V9FQ=="
+    },
+    "@ffmpeg/ffmpeg@0.12.15": {
+      "integrity": "sha512-1C8Obr4GsN3xw+/1Ww6PFM84wSQAGsdoTuTWPOj2OizsRDLT4CXTaVjPhkw6ARyDus1B9X/L2LiXHqYYsGnRFw==",
+      "dependencies": [
+        "@ffmpeg/types"
+      ]
+    },
+    "@ffmpeg/types@0.12.4": {
+      "integrity": "sha512-k9vJQNBGTxE5AhYDtOYR5rO5fKsspbg51gbcwtbkw2lCdoIILzklulcjJfIDwrtn7XhDeF2M+THwJ2FGrLeV6A=="
+    },
+    "@ffmpeg/util@0.12.2": {
+      "integrity": "sha512-ouyoW+4JB7WxjeZ2y6KpRvB+dLp7Cp4ro8z0HIVpZVCM7AwFlHa0c4R8Y/a4M3wMqATpYKhC7lSFHQ0T11MEDw=="
     },
     "@iconify-json/simple-icons@1.2.54": {
       "integrity": "sha512-OQQYl8yC5j3QklZOYnK31QYe5h47IhyCoxSLd53f0e0nA4dgi8VOZS30SgSAbsecQ+S0xlGJMjXIHTIqZ+ML3w==",
@@ -2501,6 +2519,9 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "npm:@ffmpeg/core-mt@~0.12.10",
+      "npm:@ffmpeg/ffmpeg@~0.12.15",
+      "npm:@ffmpeg/util@~0.12.2",
       "npm:@types/nodemailer@^7.0.2",
       "npm:@types/react-dom@^19.2.1",
       "npm:@types/react@^19.2.2",

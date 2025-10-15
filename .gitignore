@@ -49,6 +49,10 @@ web_modules/
 
 # Optional npm cache directory
 .npm
+.mp4
+.mov
+.flv
+.m3u8
 
 # Optional eslint cache
 .eslintcache
