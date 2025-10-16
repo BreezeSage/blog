@@ -1,11 +1,18 @@
 # Ffmpeg
 
+## HLS 流媒体播放
+
+一个简洁、轻量的 HLS 流媒体播放工具
+
+<Ffmpeg2 />
+
 ## Ffmpeg.wasm 单核使用
 
 > https://ffmpegwasm.netlify.app/docs/getting-started/usage
 
 <script setup>
-import Ffmpeg from '../components/Ffmpeg.vue'
+import Ffmpeg from '../components/Ffmpeg.vue';
+import Ffmpeg2 from '../components/ffmpeg/在线播放.vue';
 </script>
 
 <Ffmpeg />

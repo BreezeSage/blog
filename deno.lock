@@ -12,6 +12,7 @@
     "npm:@types/react@^19.2.2": "19.2.2",
     "npm:@upstash/context7-mcp@*": "1.0.21",
     "npm:dayjs@^1.11.18": "1.11.18",
+    "npm:hls.js@^1.6.13": "1.6.13",
     "npm:hono@^4.9.11": "4.9.11",
     "npm:lodash-es@^4.17.21": "4.17.21",
     "npm:nodemailer@^7.0.9": "7.0.9",
@@ -1921,6 +1922,9 @@
         "@types/hast"
       ]
     },
+    "hls.js@1.6.13": {
+      "integrity": "sha512-hNEzjZNHf5bFrUNvdS4/1RjIanuJ6szpWNfTaX5I6WfGynWXGT7K/YQLYtemSvFExzeMdgdE4SsyVLJbd5PcZA=="
+    },
     "hono@4.9.11": {
       "integrity": "sha512-MyJ4xop3boTyXl8bJBh4i20AAZTLM3AXUJphyrUb0CpgTKYb1N703z53XiKUKchGUpcPqiiYkiLOXA3kqK3icA=="
     },
@@ -2531,6 +2535,7 @@
       "npm:@types/react-dom@^19.2.1",
       "npm:@types/react@^19.2.2",
       "npm:dayjs@^1.11.18",
+      "npm:hls.js@^1.6.13",
       "npm:hono@^4.9.11",
       "npm:lodash-es@^4.17.21",
       "npm:nodemailer@^7.0.9",
