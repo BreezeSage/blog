@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
 import './server/preload.ts'
-import './server/cron.ts'
+// import './server/cron.ts'
 import { sendEmail } from './server/email.ts'
 
 const app = new Hono()
