@@ -82,11 +82,8 @@ function closeVideo() {
       <button :class="$style.submit" id="close-btn" title="关闭视频" @click="closeVideo">关闭视频</button>
     </div>
 
-    <!-- 视频播放器容器 -->
-    <div class="player-wrapper" id="player-wrapper">
-      <!-- HTML5 video 元素 -->
-      <video id="video-player" ref="videoPlayer" controls></video>
-    </div>
+    <!-- HTML5 video 元素 -->
+    <video :class="$style.video" id="video-player" ref="videoPlayer" controls></video>
   </div>
 </template>
 
@@ -104,6 +101,11 @@ function closeVideo() {
   color: white;
   height: 34px;
   padding: 4px 12px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.video {
   margin-top: 8px;
 }
 </style>

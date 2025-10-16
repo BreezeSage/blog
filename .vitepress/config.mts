@@ -2,8 +2,9 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Awesome",
+  title: "研究生小助手",
   description: "A VitePress Site",
+    lastUpdated: true,
   markdown: {
     theme: {
       light: "min-light",
@@ -54,6 +55,8 @@ export default defineConfig({
           { text: "Webrtc", link: "/docs/Webrtc.md" },
           { text: "Ffmpeg", link: "/docs/Ffmpeg.md" },
             { text: "Canvas", link: "/docs/Canvas.md" },
+            { text: "HLS 流媒体播放工具", link: "/docs/HLS 流媒体播放工具.md" },
+            { text: "视频解析", link: "/docs/视频解析.md" },
         ],
       },
     ],

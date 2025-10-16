@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Awesome"
+  name: "研究生小助手"
   text: "A VitePress Site"
-  tagline: My great project tagline
+  tagline: 赢得了时间就是赢得了一切。
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,10 +15,10 @@ hero:
       link: /docs/邮件发送
 
 features:
-  - title: Feature A
+  - title: 创意工作室
+    details: 融合算法与美学，为文本注入独特的视觉灵魂。
+  - title: 邮件发送
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: HLS 流媒体播放
+    details: 一个简洁、轻量的 HLS 流媒体播放工具
 ---
