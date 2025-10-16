@@ -1,12 +1,31 @@
-# FFmpeg
+# Ffmpeg
 
-## FFmpeg.wasm
+## Ffmpeg.wasm 单核使用
+
+> https://ffmpegwasm.netlify.app/docs/getting-started/usage
 
 <script setup>
-import FFmpeg from '../components/FFmpeg.vue'
+import Ffmpeg from '../components/Ffmpeg.vue'
 </script>
 
-<FFmpeg />
+<Ffmpeg />
+
+## 将视频文件分成每段 30 秒
+
+```sh
+ffmpeg -i input.mp4 -c copy -map 0 -segment_time 3 -reset_timestamps 1 -avoid_negative_ts make_zero -f segment output_%03d.mp4
+
+# -reset_timestamps 1 将每个分割片段的时间戳重置为从 0 开始。
+# -avoid_negative_ts make_zero 确保时间戳不为负数，避免播放器解析错误。
+```
+
+## 在视频文件第 20 秒位置提取一张图片
+
+```sh
+ffmpeg -ss 20 -i input.mp4 -frames:v 1 -q:v 2 output_20s.jpg
+```
+
+## Ffmpeg 常用指令
 
 > [https://zhuanlan.zhihu.com/p/15849180981](https://zhuanlan.zhihu.com/p/15849180981)
 
@@ -61,22 +80,3 @@ import FFmpeg from '../components/FFmpeg.vue'
 `ffmpeg -i input_video.mp4 -c:v libx265 -preset medium -crf 22 output_video.mp4` 使用更好的编码格式 H.265（相同画质下文件体积可比 H.264 小 30%-50%）
 
 码率 TODO:
-
-## 将视频文件分成每段 30 秒
-
-```sh
-# macos 里面测试出来视频是不能正常的分割出来的，并且视频前段部分都是黑屏状态
-ffmpeg -i input.mp4 -c copy -map 0 -segment_time 00:00:30 -f segment output%03d.mp4
-
-# 可以使用的
--reset_timestamps 1 将每个分割片段的时间戳重置为从 0 开始。
--avoid_negative_ts make_zero 确保时间戳不为负数，避免播放器解析错误。
-
-ffmpeg -i input.mp4 -c copy -map 0 -segment_time 3 -reset_timestamps 1 -avoid_negative_ts make_zero -f segment output_%03d.mp4
-```
-
-## 在视频文件第 20 秒位置提取一张图片
-
-```sh
-ffmpeg -ss 20 -i input.mp4 -frames:v 1 -q:v 2 output_20s.jpg
-```

@@ -6,6 +6,7 @@
     "docs:preview": "vitepress preview"
   },
   "imports": {
+    "@ffmpeg/core": "npm:@ffmpeg/core@^0.12.10",
     "@ffmpeg/core-mt": "npm:@ffmpeg/core-mt@^0.12.10",
     "@ffmpeg/ffmpeg": "npm:@ffmpeg/ffmpeg@^0.12.15",
     "@ffmpeg/util": "npm:@ffmpeg/util@^0.12.2",
